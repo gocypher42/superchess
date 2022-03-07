@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "frontend.apps.FrontendConfig",
     "api.apps.ApiConfig",
-    "polls.apps.PollsConfig",
-    "chess.apps.ChessConfig",
 ]
 
 MIDDLEWARE = [

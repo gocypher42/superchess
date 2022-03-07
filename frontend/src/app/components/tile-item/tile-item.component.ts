@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./tile-item.component.css"],
 })
 export class TileItemComponent implements OnInit {
-  @Input() tile: any;
+  @Input() color: string = "";
+  @Input() img: string = "";
 
   constructor() {}
 

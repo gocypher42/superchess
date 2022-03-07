@@ -1,1 +1,5 @@
-<app-tile-item *ngFor="let tile of tiles" [tile]="tile"></app-tile-item>
+<app-tile-item
+  *ngFor="let tile of tiles"
+  [color]="tile.color"
+  [img]="tile.img"
+></app-tile-item>
