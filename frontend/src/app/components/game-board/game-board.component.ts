@@ -9,18 +9,16 @@ import { Game } from "../../Game";
 })
 export class GameBoardComponent implements OnInit {
   game: Game = { id: -1, game_state: "", start_date: "" };
+  gameStateFetchTimer = setInterval(() => this.getGameState(), 1 * 1000);
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
+    this.getGameState();
+  }
+
+  getGameState() {
     this.gameService.getGame().subscribe((game) => {
       this.game = game;
     });
-    setInterval(() => {
-      this.gameService.getGame().subscribe((game) => {
-        this.game = game;
-      });
-    }, 1 * 1000);
   }
-
-  getGameState() {}
 }
